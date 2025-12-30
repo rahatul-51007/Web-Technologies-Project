@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login & Registration</title>
-    <link rel="stylesheet" href="log_reg_style.css">
+    <link rel="stylesheet" href="./css/log_reg_style.css">
 </head>
 <body>
 
@@ -46,6 +46,6 @@
 
 </div>
 
-<script src="script.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>

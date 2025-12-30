@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="admin_style.css">
+    <link rel="stylesheet" href="./css/admin_style.css">
 </head>
 <body>
     <!-- div title -->
@@ -131,6 +131,6 @@
             </div>
          </div>
     </div>
-    <script src="script_admin.js"></script>
+    <script src="./js/script_admin.js"></script>
 </body>
 </html>
