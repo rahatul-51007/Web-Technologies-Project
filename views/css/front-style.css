@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/* nav bar style */
+.nav-bar{    
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-bar-logo{
+    height: 60px;
+    width: 80px;
+    
+}
+.nav-list{
+    display:flex;
+}
+.nav-item{  
+    list-style: none;
+    padding: 20px;
+    text-decoration: none;
+    
+}
+/* banner-section */
+.banner-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    
+}
+.banner-info{
+    color: white;
+    
+}
+.hotel:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 5px 10px;
+    color: red;
+}
+.banner-buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* align-items: center; */
+}
+.banner-button{
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+    
+}
+/* room */
+.room-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.room-section{
+
+    margin: 100px;
+    margin-top: 50px; 
+    display: flex;  
+    gap: 20px;
+}
+.room{
+    background-color: rgb(255, 253, 208);
+    width: 250px;
+    height: 290px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 5px 0 ;
+}
+.room button:hover{
+    background-color: red;
+    color: white;
+    border: none;
+}
+.room-image{
+    width: 230px;
+    height: 210px;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+
+.room-name{
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 185px;
+    padding: 5px;
+    text-align: center;
+
+}
+.room-name2{
+    width: 130px;
+    height: 20px;
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 185px;
+    padding: 5px;
+    text-align: center;
+
+}
+.room-name3{
+    width: 130px;
+    height: 20px;
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 185px;
+    padding: 5px;
+    text-align: center;
+
+}
+.room-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+.room-info button{
+    height: 30px;
+}
+/* about */
+.about-section{
+    margin-bottom: 50px;
+    height: 300px;
+    background-color:rgb(255, 253, 208);
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.about{
+    padding: 100px;
+}
+/* footer */
+footer{
+    margin-bottom: 50px;
+}
+.footer-section{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 100px;
+    padding-right: 20px;
+    
+
+}
+
+.footer-icon{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.icon{
+    text-decoration: none;   
+}
+hr{
+    margin: 30px;
+}
+.credit{
+    text-align: center;
+}

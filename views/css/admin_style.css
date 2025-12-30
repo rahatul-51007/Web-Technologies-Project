@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* admin title */
+.admin-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 60px;
+    border-bottom: 2px solid blue;
+}
+.admin-title .logout{
+    margin-right: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+/* admin-dashboard */
+.nav-dashboard{
+    display: flex;
+    margin: 0;
+}
+/* nav-part */
+.nav{
+    margin: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #ADD8E6;
+
+}
+.nav-list{
+    margin: 0;
+    padding: 0;
+}
+.nav-item{
+    width: auto;
+    height: 30px; 
+    list-style: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+.nav-item:hover{
+    background-color: aquamarine;
+}
+/* Home */
+.dashboard{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: cornsilk;
+}
+
+
+.count{
+
+    margin: 100px;
+    margin-top: 50px; 
+    display: flex; 
+    justify-content: space-around; 
+}
+
+.count-card{
+    background-color: rgb(229, 222, 82);
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 ;
+}
+
+.room-count{
+    margin: 100px;
+    margin-top: 50px; 
+    display: flex; 
+    justify-content: space-between;
+}
+.room-card{
+    background-color: rgb(229, 222, 82);
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 ;
+}
+/* room update */
+.form-room{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width: auto;
+    height: 200px;
+
+}
+#room-option .save{
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+
+#room-option select{
+    width: 200px;
+    height: 25px;
+
+}
+#room-option input{
+    width: 190px;
+    height: 20px;
+
+}
+#room-option td{
+    padding-bottom: 15px;
+}
+
+/* add-remove */
+.form-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width: auto;
+    height: 200px;
+
+}
+#add-option .add{
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+
+
+#add-option input{
+    width: 190px;
+    height: 20px;
+
+}
+#add-option td{
+    padding-bottom: 15px;
+}
+
+/* staff */
+/* search */
+.search-container{
+    margin: 30px;
+    width: auto;
+    height: 200px;
+}
+#search-by-room-name input{
+    width: 600px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+#search-by-room-name .search-rname{
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+#search-by-date td{
+    padding-bottom: 15px;
+}
+#search-by-date .search-date{
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
