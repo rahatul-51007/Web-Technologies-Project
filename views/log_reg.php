@@ -31,28 +31,9 @@ session_start();
             <button type="submit">Login</button><br>
 
             <p class="link">Forgot Password?</p>
-            <p class="link" onclick="showRegister()">Don't have an account?</p>
+            <a class="link" href="../controllers/reg_session.php">Don't have an account?</a>
         </form>
      </div>
-    
-
-    <!-- Registration Form -->
-     <div >
-        <form class="form-box" id="registerBox" onsubmit="return false;" method="post">
-            <h2>Register</h2>
-
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Username" >
-            <input type="tel" placeholder="Mobile Number">
-            <input type="password" placeholder="Password">
-
-            <button type="submit">Register</button>
-
-            <p class="link" onclick="showLogin()"> Already have an account?</p>
-        </form>
-     </div>
-    
-
 </div>
 
 <script src="./js/script.js"></script>
