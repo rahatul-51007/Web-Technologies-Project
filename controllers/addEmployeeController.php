@@ -11,8 +11,8 @@ if ($method === "POST") {
     $_SESSION['usernameErrMsg'] = "";
     $_SESSION['emailErrMsg'] = "";
     $_SESSION['passwordErrMsg'] = "";
-    $_SESSION['name'] = "";
-    $_SESSION['username'] = "";
+    $_SESSION['fname'] = "";
+    $_SESSION['fusername'] = "";
     $_SESSION['email'] = "";
     $_SESSION['pwd'] = "";
     $isValid = true;
@@ -22,7 +22,7 @@ if ($method === "POST") {
         $_SESSION['success'] = "";
         $isValid = false;
     } else {
-        $_SESSION['name'] = $name;
+        $_SESSION['fname'] = $name;
     }
 
     if (empty($username)) {
@@ -30,7 +30,7 @@ if ($method === "POST") {
         $_SESSION['success'] = "";
         $isValid = false;
     } else {
-        $_SESSION['username'] = $username;
+        $_SESSION['fusername'] = $username;
     }
     if (empty($email)) {
         $_SESSION['emailErrMsg'] = "Email is empty";
@@ -74,8 +74,8 @@ function regController($user)
     $_SESSION['success'] = "";
     if ($status===true) {
         $_SESSION['success'] = "User added successfully";
-        $_SESSION['name'] = "";
-        $_SESSION['username'] = "";
+        $_SESSION['fname'] = "";
+        $_SESSION['fusername'] = "";
         $_SESSION['email'] = "";
         $_SESSION['password'] = "";
         
@@ -98,3 +98,4 @@ function regController($user)
     header("Location:../views/employeeadd.php");
 }
 
+?>

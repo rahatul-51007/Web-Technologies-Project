@@ -25,24 +25,51 @@ include_once 'nav.php';
         <!-- div dashboard -->
          <div class="dashboard">
             <div id="add-remove">
-                <div class="form-add">
-                    <form action="../controllers/addEmployeeController.php" id="add-option" method="post" >
+                <div class="form-add"> 
+                    <form action="../controllers/addEmployeeController.php" id="add-option" method="post" onsubmit="return validate(this)" >
+                        <span id="success">
+                            <?php 
+                            echo isset($_SESSION['success']) ? $_SESSION['success'] : ""; 
+                            unset($_SESSION['success']);
+                            ?>
+                        </span>
+                        <span>
+                            <?php echo isset($_SESSION['invalidMsg']) ? $_SESSION['invalidMsg'] : ""; ?>
+                        </span>
                         <table>
                             <tr>
                                 <td>Full name</td>
-                                <td><input type="text"></td>                                </td>
+                                <td><input type="text" placeholder="Full name" name="name" value="<?php echo isset($_SESSION['fname']) ? $_SESSION['fname'] : ""; ?>"></td>   
+                                 <td><span id="nameError">
+                                    <?php echo isset($_SESSION['nameErrMsg']) ? $_SESSION['nameErrMsg'] : ""; ?>
+                                </span> </td>                            
                             </tr>
                             <tr>
                                 <td>Username</td>
-                                <td><input type="text"></td>                                </td>
+                                <td><input type="text" placeholder="Username" name="uname" value="<?php echo isset($_SESSION['fusername']) ? $_SESSION['fusername'] : ""; ?>"></td>  
+                                <td><span id="userNameError">
+                                    <?php echo isset($_SESSION['usernameErrMsg']) ? $_SESSION['usernameErrMsg'] : ""; ?>
+                                </span>
+                                <span>
+                                    <?php echo isset($_SESSION['invalidUnameMsg']) ? $_SESSION['invalidUnameMsg'] : ""; ?>
+                                </span><td>                          
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td><input type="email"></td>                                </td>
+                                <td><input type="email" placeholder="Email" name="email" value="<?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ""; ?>"></td> 
+                                <td><span id="emailError">
+                                    <?php echo isset($_SESSION['emailErrMsg']) ? $_SESSION['emailErrMsg'] : ""; ?>
+                                </span>
+                                <span>
+                                    <?php echo isset($_SESSION['invalidEmailMsg']) ? $_SESSION['invalidEmailMsg'] : ""; ?>
+                                </span> </td>                         
                             </tr>
                             <tr>
                                 <td>Password</td>
-                                <td><input type="text"></td>
+                                <td><input type="text" placeholder="Password" name="pwd" value="<?php echo isset($_SESSION['password']) ? $_SESSION['password'] : ""; ?>"></td>
+                                <td><span id="passErrMsg">
+                                    <?php echo isset($_SESSION['passwordErrMsg']) ? $_SESSION['passwordErrMsg'] : ""; ?>
+                                </span></td>
                             </tr>
                             <!-- <tr>
                                 <td>ID</td>
@@ -56,6 +83,6 @@ include_once 'nav.php';
 
          </div>
     </div>
-    <script src="./js/script_admin.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

@@ -137,7 +137,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    /* margin: 60px; */
+    padding: 60px;
     width: auto;
     height: 200px;
 

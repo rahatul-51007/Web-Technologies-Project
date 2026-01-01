@@ -97,3 +97,4 @@ function regController($user)
     header("Location: ../views/reg.php");
 }
 
+?>
