@@ -1,4 +1,5 @@
 <?php
+include_once '../controllers/pageSecurity.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +14,8 @@
     <div>
         <div class="admin-title">
             <p></p>
-            <p>Welcome</p>
-            <button class="logout">Logout</button>
+            <p>Welcome, <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'Anonymous User'; ?></p>
+            <a href="../controllers/logout.php" class="logout">Logout</a>
         </div>
     </div>
     <div class="nav-dashboard">
@@ -88,17 +89,25 @@
                     <form action="" id="add-option" >
                         <table>
                             <tr>
+                                <td>Full name</td>
+                                <td><input type="text"></td>                                </td>
+                            </tr>
+                            <tr>
                                 <td>Username</td>
                                 <td><input type="text"></td>                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td><input type="tel"></td>                                </td>
                             </tr>
                             <tr>
                                 <td>Password</td>
                                 <td><input type="text"></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>ID</td>
                                 <td><input type="text"></td>
-                            </tr>
+                            </tr> -->
                         </table>
                         <input type="submit" value="Add" class="add">
                     </form>

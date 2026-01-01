@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +14,20 @@
 
     <!-- Login Form -->
      <div >
-        <form class="form-box" id="loginBox" onsubmit="return false;" method="post">
+        <form action="../controllers/login_controller.php" class="form-box" id="loginBox" method="post">
             <h2>Login</h2>
 
-            <input type="tel" placeholder="Mobile Number"><br><br>
-            <input type="password" placeholder="Password"><br><br>
-
+            <input type="text" name="uname" placeholder="Username" value="<?php echo isset($_SESSION['username']) ? $_SESSION['username'] : ""; ?>"><br><br>
+            <span>
+			    <?php echo isset($_SESSION['usernameErrMsg']) ? $_SESSION['usernameErrMsg'] : ""; ?>
+		    </span>
+            <input type="password" name="password" placeholder="Password"><br><br>
+            <span>
+			    <?php echo isset($_SESSION['passwordErrMsg']) ? $_SESSION['passwordErrMsg'] : ""?>
+		    </span>
+            <span>
+			    <?php echo isset($_SESSION['invalidErrMsg']) ? $_SESSION['invalidErrMsg'] : ""?>
+		    </span>
             <button type="submit">Login</button><br>
 
             <p class="link">Forgot Password?</p>
@@ -33,7 +42,7 @@
             <h2>Register</h2>
 
             <input type="text" placeholder="Full Name">
-            <input type="date" >
+            <input type="text" placeholder="Username" >
             <input type="tel" placeholder="Mobile Number">
             <input type="password" placeholder="Password">
 

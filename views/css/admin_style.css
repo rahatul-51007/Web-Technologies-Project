@@ -17,7 +17,14 @@ body{
     height: 40px;
     background-color: red;
     color: aliceblue;
+    display: flex;                
+    justify-content: center;      
+    align-items: center;          
     border: none;
+    text-align: center;           
+    text-decoration: none;
+    font-weight: bold;           
+    cursor: pointer;
 }
 /* admin-dashboard */
 .nav-dashboard{
