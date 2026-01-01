@@ -43,7 +43,7 @@ body{
     margin: 0;
     padding: 0;
 }
-.nav-item{
+.nav-item {
     width: auto;
     height: 30px; 
     list-style: none;
@@ -52,6 +52,12 @@ body{
     text-decoration: none;
     cursor: pointer;
     
+}
+.nav-item a{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
 }
 .nav-item:hover{
     background-color: aquamarine;
@@ -114,12 +120,12 @@ body{
 
 #room-option select{
     width: 200px;
-    height: 25px;
+    height: 30px;
 
 }
 #room-option input{
     width: 190px;
-    height: 20px;
+    height: 30px;
 
 }
 #room-option td{
@@ -147,7 +153,7 @@ body{
 
 #add-option input{
     width: 190px;
-    height: 20px;
+    height: 30px;
 
 }
 #add-option td{
@@ -163,12 +169,12 @@ body{
 }
 #search-by-room-name input{
     width: 600px;
-    height: 20px;
+    height: 30px;
     margin-bottom: 20px;
 }
 #search-by-room-name .search-rname{
     width: 100px;
-    height: 25px;
+    height: 30px;
     background-color: red;
     color: aliceblue;
     border: none;

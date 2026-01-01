@@ -1,5 +1,6 @@
 <?php
 include_once '../controllers/pageSecurity.php';
+include_once 'nav.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,28 +10,21 @@ include_once '../controllers/pageSecurity.php';
     <title>Admin</title>
     <link rel="stylesheet" href="./css/admin_style.css">
 </head>
-<body>
-    <!-- div title -->
-    <div>
-        <div class="admin-title">
-            <p></p>
-            <p>Welcome, <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'Anonymous User'; ?></p>
-            <a href="../controllers/logout.php" class="logout">Logout</a>
-        </div>
-    </div>
+<body>  
     <div class="nav-dashboard">
         <!-- div nav -->
          <div class="nav">
             <ul class="nav-list">
-                <li class="nav-item" onclick="showHome()">Home</li>
-                <li class="nav-item" onclick="showRoomUpdate()">Room Update</li>
-                <li class="nav-item" onclick="showAdd()">Add/Remove Employee</li>
-                <li class="nav-item" onclick="showRequest()">Request</li>
-                <li class="nav-item" onclick="showSummary()">Summary</li>
+                <li class="nav-item" ><a href="admin_dashboard.php">Home</a></li>
+                <li class="nav-item" ><a href="roomupdate.php">Room Update</a></li>
+                <li class="nav-item" ><a href="employeeadd.php">Add/Remove Employee</a></li>
+                <li class="nav-item" ><a href="employeereq.php">Request</a></li>
+                <li class="nav-item" ><a href="summary.php">Summary</a></li>
             </ul>
          </div>
         <!-- div dashboard -->
          <div class="dashboard">
+            
             <div id="home" >
                 <div class="count">
                    <div class="count-card">
@@ -86,7 +80,7 @@ include_once '../controllers/pageSecurity.php';
             </div>
             <div id="add-remove">
                 <div class="form-add">
-                    <form action="" id="add-option" >
+                    <form action="../controllers/addEmployeeController.php" id="add-option" method="post" >
                         <table>
                             <tr>
                                 <td>Full name</td>
