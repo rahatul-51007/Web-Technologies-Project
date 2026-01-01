@@ -19,6 +19,7 @@ if ($method === "POST") {
 
     if (empty($name)) {
         $_SESSION['nameErrMsg'] = "Name is empty";
+        $_SESSION['success'] = "";
         $isValid = false;
     } else {
         $_SESSION['name'] = $name;
@@ -26,19 +27,25 @@ if ($method === "POST") {
 
     if (empty($username)) {
         $_SESSION['usernameErrMsg'] = "Username is empty";
+        $_SESSION['success'] = "";
         $isValid = false;
     } else {
         $_SESSION['username'] = $username;
     }
     if (empty($email)) {
         $_SESSION['emailErrMsg'] = "Email is empty";
+        $_SESSION['success'] = "";
         $isValid = false;
     } else {
         $_SESSION['email'] = $email;
     }
     if (empty($password)) {
         $_SESSION['passwordErrMsg'] = "Password is empty";
+        $_SESSION['success'] = "";
         $isValid = false;
+    }
+    else{
+        $_SESSION['password'] = $password;
     }
     if ($isValid) {
         // $_SESSION['isLoggedIn'] = true;
@@ -69,14 +76,17 @@ function regController($user)
         $_SESSION['name'] = "";
         $_SESSION['username'] = "";
         $_SESSION['email'] = "";
+        $_SESSION['password'] = "";
         
 
     } elseif($status==="errUname") {
         $_SESSION['invalidUnameMsg'] = "Username already exist";
+        $_SESSION['success'] = "";
 
     }
     elseif($status==="errEmail") {
         $_SESSION['invalidEmailMsg'] = "Email already exist";
+        $_SESSION['success'] = "";
 
     }
     else{

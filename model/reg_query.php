@@ -3,7 +3,7 @@
 
     function regUser($user){
         $conn=dbConnection();
-        $query="SELECT * FROM user WHERE uname='{$user['uname']}' AND email='{$user['email']}'";
+        $query="SELECT * FROM user WHERE uname='{$user['uname']}'";
         $result=mysqli_query($conn,$query);
         $count=mysqli_num_rows($result);
         if($count>0 ){
