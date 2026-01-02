@@ -1,6 +1,7 @@
 <?php
 include_once '../controllers/pageSecurity.php';
 include_once 'nav.php';
+include_once '../model/employeeListQuery.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +81,38 @@ include_once 'nav.php';
                     </form>
                 </div>     
             </div>
-
+            <div class="outer-wrapper">
+                <div class="table-wrapper">
+                    <table class="emptable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Status</th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                        <?php
+                        $result=employeeTable();
+                        while($row=mysqli_fetch_assoc($result)){
+                        ?>
+                        <tr>
+                            <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['uname']; ?></td>
+                            <td><?php echo $row['email']; ?></td>
+                            <td><?php echo $row['pwd']; ?></td>
+                        </tr>
+                        <?php    
+                        }
+                        ?>
+                     </tbody>
+                    </table>
+                </div>
+            </div>
+             
          </div>
     </div>
     <script src="./js/script.js"></script>
