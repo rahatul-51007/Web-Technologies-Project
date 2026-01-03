@@ -71,6 +71,7 @@ include_once '../model/roomListQuery.php';
                             </tr>
                         </table>
                         <input type="submit" value="Save" class="save">
+                        
                     </form>
                     
                 </div>

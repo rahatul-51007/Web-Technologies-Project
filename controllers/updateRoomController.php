@@ -6,7 +6,6 @@ if ($method === "POST") {
     $roomName=$_POST['roomName'];
     $roomQuantity=$_POST['roomQuantity'];
     $roomPrice = $_POST['roomPrice'];
-
     $_SESSION['roomErrMsg'] = "";
     $_SESSION['quantityErrMsg'] = "";
     $_SESSION['priceErrMsg'] = "";
