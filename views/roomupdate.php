@@ -29,30 +29,50 @@ include_once '../model/roomListQuery.php';
          <div class="dashboard">
             <div id="update" >
                 <div class="form-room" >
-                    <form action="" id="room-option" >
-                        
+                    <form action="../controllers/updateRoomController.php" id="room-option" method="post" onsubmit="return validate(this)"  >
+                        <span id="success">
+                            <?php 
+                            echo isset($_SESSION['successUpdate']) ? $_SESSION['successUpdate'] : ""; 
+                            unset($_SESSION['successUpdate']);
+                            ?>
+                        </span>
+                        <span>
+                            <?php echo isset($_SESSION['invalidMsgUpdate']) ? $_SESSION['invalidMsgUpdate'] : ""; 
+                            unset($_SESSION['invalidMsgUpdate']);
+                            ?>
+                        </span>
                         <table>
                             <tr>
                                 <td>Room Type</td>
-                                <td><input type="text" value="<?php echo isset($_SESSION['room_type']) ? $_SESSION['room_type'] : ""; ?>" readonly></td>
+                                <td><input type="text" name="roomName" value="<?php echo isset($_SESSION['roomName']) ? $_SESSION['roomName'] : ""; ?>" readonly></td>
+                                <td>
+                                    <span id="nameError">
+                                        <?php echo isset($_SESSION['roomErrMsg']) ? $_SESSION['roomErrMsg'] : ""; ?>
+                                    </span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Quantity</td>
-                                <td><input type="text"  value="<?php echo isset($_SESSION['count']) ? $_SESSION['count'] : ""; ?>" readonly></td>
+                                <td><input type="text" name="roomQuantity"  value="<?php echo isset($_SESSION['roomQuantity']) ? $_SESSION['roomQuantity'] : ""; ?>" readonly></td>
+                                <td>
+                                    <span id="quantityError">
+                                        <?php echo isset($_SESSION['quantityErrMsg']) ? $_SESSION['quantityErrMsg'] : ""; ?>
+                                    </span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Price</td>
-                                <td><input type="text"  value="<?php echo isset($_SESSION['price']) ? $_SESSION['price'] : ""; ?>"></td>
+                                <td><input type="text" name="roomPrice"  value="<?php echo isset($_SESSION['roomPrice']) ? $_SESSION['roomPrice'] : ""; ?>"></td>
+                                <td>
+                                    <span id="priceError">
+                                        <?php echo isset($_SESSION['priceErrMsg']) ? $_SESSION['priceErrMsg'] : ""; ?>
+                                    </span>
+                                </td>
                             </tr>
                         </table>
                         <input type="submit" value="Save" class="save">
                     </form>
-                    <?php
-                        unset($_SESSION['edit_id']);
-                        unset($_SESSION['room_type']);
-                        unset($_SESSION['count']);
-                        unset($_SESSION['price']);
-                    ?>
+                    
                 </div>
             </div>
             <div class="outer-wrapper">
@@ -90,6 +110,6 @@ include_once '../model/roomListQuery.php';
          </div>
          //
     </div>
-    <script src="./js/script_admin.js"></script>
+    <script src="./js/scriptRoom.js"></script>
 </body>
 </html>

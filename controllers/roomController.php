@@ -6,9 +6,9 @@ require_once '../model/roomEditQuery.php';
         $result=editQuery($receive_id);
         $row=mysqli_fetch_assoc($result);
         if($row){
-            $_SESSION['room_type']=$row['room_type'];
-            $_SESSION['count']=$row['count'];
-            $_SESSION['price']=$row['price'];
+            $_SESSION['roomName']=$row['room_type'];
+            $_SESSION['roomQuantity']=$row['count'];
+            $_SESSION['roomPrice']=$row['price'];
         }
 
         header("Location: ../views/roomupdate.php");  

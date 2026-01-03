@@ -35,7 +35,9 @@ include_once '../model/employeeListQuery.php';
                             ?>
                         </span>
                         <span>
-                            <?php echo isset($_SESSION['invalidMsg']) ? $_SESSION['invalidMsg'] : ""; ?>
+                            <?php echo isset($_SESSION['invalidMsg']) ? $_SESSION['invalidMsg'] : ""; 
+                            unset($_SESSION['invalidMsg']);
+                            ?>
                         </span>
                         <table>
                             <tr>

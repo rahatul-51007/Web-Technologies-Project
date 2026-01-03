@@ -11,7 +11,7 @@ function validate(pForm){
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let errorFlag=false;
 
-    if(name==""){
+    if(name===""){
         document.getElementById('nameError').innerHTML='Name is empty';
         document.getElementById('nameError').style.color='red';
         errorFlag=true;
@@ -23,13 +23,13 @@ function validate(pForm){
         errorFlag=true;
     }
     
-    if(username==""){
+    if(username===""){
         document.getElementById('userNameError').innerHTML='Please fill up the username';
         document.getElementById('userNameError').style.color='red';
         errorFlag=true;
     }
 
-    if(email==""){
+    if(email===""){
         document.getElementById('emailError').innerHTML='Please fill up the email';
         document.getElementById('emailError').style.color='red';
         errorFlag=true;
