@@ -177,6 +177,63 @@ body{
     align-items: center;
     
 }
+
+thead th{
+    background-color: #2c3e50; 
+    color: #ffffff;
+    text-align: left;
+    position: sticky;
+    top: 0px;
+}
+tbody td {
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-align: left;
+      
+}
+/* room */
+.roomtable{
+    border-collapse: separate;
+    display: block;
+    overflow-y: auto;
+    /* table-layout: fixed; */
+    width: 100%; 
+    max-height: 250px;
+    border-spacing: 0px;
+    margin: 0px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.roomtable th,
+.roomtable td {
+    width: 10%;                   
+    padding: 12px 15px;
+    /* box-sizing: border-box;       
+    overflow: hidden;             
+    text-overflow: ellipsis;      
+    white-space: nowrap;          */
+}
+
+
+.roomtable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+.roomtable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.roomtable tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
+/* employee */
 .emptable{
     border-collapse: separate;
     display: block;
