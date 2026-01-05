@@ -94,7 +94,8 @@ include_once '../model/employeeListQuery.php';
                                 <th>Username</th>
                                 <th>Email</th>
                                 <th>Password</th>
-                                <th>Status</th>
+                                <th>Update</th>
+                                <th>Delete</th>
                             </tr>
                             
                         </thead>
@@ -109,8 +110,10 @@ include_once '../model/employeeListQuery.php';
                             <td><?php echo $row['email']; ?></td>
                             <td><?php echo $row['pwd']; ?></td>
                             <td>
-                                <a href="../controllers/employeeController.php?edit_id=<?php echo $row['id']; ?>">Edit</a>|
-                                <a href="../controllers/deleteEmployeeController.php?edit_id=<?php echo $row['id']; ?>">Delete</a>
+                                <a class="btn btn-update" href="../controllers/employeeController.php?edit_id=<?php echo $row['id']; ?>">Edit</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-delete" href="../controllers/deleteEmployeeController.php?edit_id=<?php echo $row['id']; ?>">Delete</a>
                             </td>
                         </tr>
                         <?php    

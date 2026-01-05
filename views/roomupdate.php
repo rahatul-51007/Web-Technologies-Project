@@ -1,9 +1,7 @@
 <?php
 include_once '../controllers/pageSecurity.php';
 include_once 'nav.php';
-include_once '../model/roomListQuery.php';
-// include_once '../controllers/roomController.php';
-    
+include_once '../model/roomListQuery.php';   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,7 +97,7 @@ include_once '../model/roomListQuery.php';
                             <td><?php echo $row['room_type']; ?></td>
                             <td><?php echo $row['count']; ?></td>
                             <td><?php echo $row['price']; ?></td>
-                            <td><a href="../controllers/roomController.php?edit_id=<?php echo $row['id']; ?>">Edit</a></td>
+                            <td><a class="btn btn-update" href="../controllers/roomController.php?edit_id=<?php echo $row['id']; ?>">Edit</a></td>
                         </tr>
                         <?php    
                         }
@@ -109,7 +107,6 @@ include_once '../model/roomListQuery.php';
                 </div>
             </div>
          </div>
-         //
     </div>
     <script src="./js/scriptRoom.js"></script>
 </body>
