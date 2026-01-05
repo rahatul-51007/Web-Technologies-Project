@@ -79,7 +79,9 @@ include_once '../model/employeeListQuery.php';
                                 <td><input type="text"></td>
                             </tr> -->
                         </table>
-                        <input type="submit" value="Add" class="add">
+                        <input type="submit" name="add" value="Add" class="add">
+                        <input type="submit" name="update" value="Update" class="add">
+                        
                     </form>
                 </div>     
             </div>
@@ -106,6 +108,10 @@ include_once '../model/employeeListQuery.php';
                             <td><?php echo $row['uname']; ?></td>
                             <td><?php echo $row['email']; ?></td>
                             <td><?php echo $row['pwd']; ?></td>
+                            <td>
+                                <a href="../controllers/employeeController.php?edit_id=<?php echo $row['id']; ?>">Edit</a>|
+                                <a href="#">Delete</a>
+                            </td>
                         </tr>
                         <?php    
                         }
