@@ -110,7 +110,7 @@ include_once '../model/employeeListQuery.php';
                             <td><?php echo $row['pwd']; ?></td>
                             <td>
                                 <a href="../controllers/employeeController.php?edit_id=<?php echo $row['id']; ?>">Edit</a>|
-                                <a href="#">Delete</a>
+                                <a href="../controllers/deleteEmployeeController.php?edit_id=<?php echo $row['id']; ?>">Delete</a>
                             </td>
                         </tr>
                         <?php    
