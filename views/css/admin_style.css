@@ -1,0 +1,339 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* admin title */
+.admin-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 60px;
+    border-bottom: 2px solid blue;
+}
+.admin-title .logout{
+    margin-right: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    display: flex;                
+    justify-content: center;      
+    align-items: center;          
+    border: none;
+    text-align: center;           
+    text-decoration: none;
+    font-weight: bold;           
+    cursor: pointer;
+}
+/* admin-dashboard */
+.nav-dashboard{
+    display: flex;
+    margin: 0;
+}
+/* nav-part */
+.nav{
+    margin: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #ADD8E6;
+
+}
+.nav-list{
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    width: auto;
+    height: 30px; 
+    list-style: none;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+.nav-item a{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+.nav-item:hover{
+    background-color: aquamarine;
+}
+/* Home */
+.dashboard{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: cornsilk;
+}
+
+
+.count{
+
+    margin: 100px;
+    margin-top: 50px; 
+    display: flex; 
+    justify-content: space-around; 
+}
+
+.count-card{
+    background-color: rgb(229, 222, 82);
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 ;
+}
+
+.room-count{
+    margin: 100px;
+    margin-top: 50px; 
+    display: flex; 
+    justify-content: space-between;
+}
+.room-card{
+    background-color: rgb(229, 222, 82);
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 ;
+}
+/* room update */
+.form-room{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width: auto;
+    height: 200px;
+
+}
+#room-option .save{
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+
+#room-option select{
+    width: 200px;
+    height: 30px;
+
+}
+#room-option input{
+    width: 190px;
+    height: 30px;
+
+}
+#room-option td{
+    padding-bottom: 15px;
+}
+
+/* add-remove */
+.form-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 60px; */
+    padding: 60px;
+    width: auto;
+    height: 200px;
+
+}
+#add-option .add{
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+
+
+#add-option input{
+    width: 190px;
+    height: 30px;
+
+}
+#add-option td{
+    padding-bottom: 15px;
+}
+
+.outer-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.table-wrapper{
+    width: 90%;
+    max-height: 200px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+thead th{
+    background-color: #2c3e50; 
+    color: #ffffff;
+    text-align: left;
+    position: sticky;
+    top: 0px;
+}
+tbody td {
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-align: left;
+      
+}
+/* room */
+.roomtable{
+    border-collapse: separate;
+    display: block;
+    overflow-y: auto;
+    /* table-layout: fixed; */
+    width: 100%; 
+    max-height: 250px;
+    border-spacing: 0px;
+    margin: 0px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.roomtable th,
+.roomtable td {
+    width: 10%;                   
+    padding: 12px 15px;
+    /* box-sizing: border-box;       
+    overflow: hidden;             
+    text-overflow: ellipsis;      
+    white-space: nowrap;          */
+}
+
+
+.roomtable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+.roomtable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.roomtable tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
+/* employee */
+.emptable{
+    border-collapse: separate;
+    display: block;
+    overflow-y: auto;
+    /* table-layout: fixed; */
+    width: 100%; 
+    max-height: 250px;
+    border-spacing: 0px;
+    margin: 0px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.emptable th,
+.emptable td {
+    width: 10%;                   
+    padding: 12px 15px;
+    /* box-sizing: border-box;       
+    overflow: hidden;             
+    text-overflow: ellipsis;      
+    white-space: nowrap;          */
+}
+thead th{
+    background-color: #2c3e50; 
+    color: #ffffff;
+    text-align: left;
+    position: sticky;
+    top: 0px;
+}
+tbody td {
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-align: left;
+      
+}
+
+.emptable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+.emptable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.emptable tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* delete and update button */
+.btn{
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    min-width: 50px;
+    color: #fff;
+
+}
+.btn-update {
+    background-color: blue;
+}
+.btn-delete {
+    background-color: red;
+}
+
+/* staff */
+/* search */
+.search-container{
+    margin: 30px;
+    width: auto;
+    height: 200px;
+}
+#search-by-room-name input{
+    width: 600px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+#search-by-room-name .search-rname{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
+#search-by-date td{
+    padding-bottom: 15px;
+}
+#search-by-date .search-date{
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+}
