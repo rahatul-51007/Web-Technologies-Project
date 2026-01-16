@@ -1,5 +1,6 @@
 <?php
 include_once '../controllers/pageSecurity.php';
+require_once '../model/room_price_query.php';
 include_once 'nav.php';
 ?>
 <!DOCTYPE html>
@@ -30,26 +31,23 @@ include_once 'nav.php';
                    <div class="count-card">
                         <p class="count-title">Total Booked Room</p>
                     </div>
-                    <div class="count-card">
+                    <div class="count-card"> 
+                        <?php $row = mysqli_fetch_assoc($result2); ?>
                         <p class="count-title">Total Staff</p>
+                        <h1><?php echo $row['total_staff']; ?></h1>
                     </div>
+
                 </div>
-                <div class="room-count">
-                    <div class="room-card">
-                        <p class="count-title">Delux</p>
-                    </div>
-                    <div class="room-card">
-                        <p class="count-title">Super Delux King</p>
-                    </div>
-                    <div class="room-card">
-                        <p class="count-title">Super Delux Twin</p>
-                    </div>
-                    <div class="room-card">
-                        <p class="count-title">Junior Suit</p>
-                    </div>
+                <div class="room-count">                   
+                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
+                            <div class="room-card">
+                                <p class="count-title"><?php echo $row['room_type']; ?></p>
+                                <h1><?php echo $row['count']; ?></h1>
+                            </div>
+                    <?php } ?>
                 </div>
             </div>
-            <div id="update" >
+            <!-- <div id="update" >
                 <div class="form-room" >
                     <form action="" id="room-option" >
                         <table>
@@ -77,8 +75,8 @@ include_once 'nav.php';
                         <input type="submit" value="Save" class="save">
                     </form>
                 </div>
-            </div>
-            <div id="add-remove">
+            </div> -->
+            <!-- <div id="add-remove">
                 <div class="form-add">
                     <form action="../controllers/addEmployeeController.php" id="add-option" method="post" >
                         <table>
@@ -98,18 +96,14 @@ include_once 'nav.php';
                                 <td>Password</td>
                                 <td><input type="text"></td>
                             </tr>
-                            <!-- <tr>
-                                <td>ID</td>
-                                <td><input type="text"></td>
-                            </tr> -->
                         </table>
                         <input type="submit" value="Add" class="add">
                     </form>
                 </div>     
-            </div>
-            <div id="staff">
-            </div>
-            <div id="summary">
+            </div> -->
+            <!-- <div id="staff">
+            </div> -->
+            <!-- <div id="summary">
                 <div class="search-container">
                     <form action="" id="search-by-room-name">
                         <input type="text">
@@ -131,7 +125,7 @@ include_once 'nav.php';
                     </form>
                 </div>
 
-            </div>
+            </div> -->
          </div>
     </div>
     <script src="./js/script_admin.js"></script>

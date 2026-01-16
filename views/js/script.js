@@ -46,6 +46,11 @@ function validate(pForm){
         document.getElementById('passErrMsg').style.color='red';
         errorFlag=true;
     }
+    if (password.length < 8) {
+        document.getElementById('passErrMsg').innerHTML = 'Password must be at least 8 characters long';
+        document.getElementById('passErrMsg').style.color = 'red';
+        errorFlag = true;
+    }
     
 
     return !errorFlag;

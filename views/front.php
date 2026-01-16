@@ -1,4 +1,5 @@
 <?php
+require_once '../model/room_price_query.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,67 +20,51 @@
             </div>
             <div>
                 <ul class="nav-list">
-                    <li class="nav-item">Home</li>
-                    <li class="nav-item">Room</li>
-                    <li class="nav-item">About Us</li>
-                    <li class="nav-item">Contact</li>
-                    <li class="nav-item">Login/Register</li>
+                    <li class="nav-item"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#room">Room</a></li>
+                    <li class="nav-item"><a href="#about">About Us</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                    <li class="nav-item"><a href="log_reg.php">Login/Register</a></li>
                 </ul>
             </div>       
     </nav>
     <!-- banner section -->
-     <div class="banner-container">
+     <div class="banner-container" id="home">
         <div class="banner-info">
             <h1>Great Choice Of <span class="hotel">Hotel</span></h1>
             <div class="banner-buttons">
-                <button class="banner-button">Book Now</button>
-                <button class="banner-button">Contact Us</button>
+                <button class="banner-button"><a href="log_reg.php">Book Now</a></button>
+                <button class="banner-button"><a href="#contact">Contact Us</a></button>
             </div>
         </div>
      </div>
     <!-- room section -->
-      <div>
+    <div id="room">
         <div class="room-head">
             <h1 >Luxury Rooms & Suites</h1>
         </div>
         
-            <div class="room-section">
-                <div class="room">
-                    <img class="room-image" src="./images/delux.jpg" alt="">
-                    <p class="room-name">Delux</p>
-                    <div class="room-info">
-                        <p>$180</p>
-                        <button>Book Now</button>
-                    </div>
+            <!--  <div class="room-section"> -->
+                <div class="room-section">
+                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
+                    
+                        <div class="room">
+                            <img class="room-image" src="./images/<?php echo $row['room_type']; ?>.jpg" alt="">
+                        
+                            <p class="room-name"><?php echo $row['room_type']; ?></p>
+
+                            <div class="room-info">
+                                <p>$<?php echo $row['price']; ?></p>
+                                <button><a href="log_reg.php">Book Now</a></button>
+                            </div>
+                        </div>
+
+                    <?php } ?>
                 </div>
-                <div class="room">
-                    <img class="room-image" src="./images/Super Delux King.jpg" alt="">
-                    <p class="room-name2">Super Delux King</p>
-                    <div class="room-info">
-                        <p>$280</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-                <div class="room">
-                    <img class="room-image" src="./images/super delux twin.jpg" alt="">
-                    <p class="room-name3">Super Delux Twin</p>
-                    <div class="room-info">
-                        <p>$250</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-                <div class="room">
-                    <img class="room-image" src="./images/JuniorSuit.jpg" alt="">
-                    <p class="room-name">Junior Suit</p>
-                    <div class="room-info">
-                        <p>$300</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-            </div>
-      </div>
+    </div>
+            
     <!-- about us -->
-        <div class="about-section">
+        <div class="about-section" id="about">
             <div class="about">
                 <h1>About Us</h1>
                 <h2>
@@ -92,7 +77,7 @@
         </div>
       <!--footer  -->
       <footer>
-        <div class="footer-section">
+        <div class="footer-section" id="contact">
             <div >
                 <p>Hotel Logo</p>
                 <h3>Follow Us</h3>

@@ -30,8 +30,8 @@ session_start();
 		    </span>
             <button type="submit">Login</button><br>
 
-            <p class="link">Forgot Password?</p>
-            <a class="link" href="../controllers/reg_session.php">Don't have an account?</a>
+            <p class="link"><a href="../views/forgetPassword.php">Forget Password?</a></p>
+            <p class="link"><a href="../controllers/reg_session.php">Don't have an account?</a></p>
         </form>
      </div>
 </div>
