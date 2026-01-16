@@ -29,7 +29,7 @@ session_start();
 
             <button type="submit">Submit</button>
 
-            <a class="link" href="../controllers/login_session.php">Login using password</a>
+            <p class="link"><a href="../controllers/login_session.php">Login using password</a></p>
         </form>
      </div>
     
