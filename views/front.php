@@ -20,26 +20,26 @@ require_once '../model/room_price_query.php';
             </div>
             <div>
                 <ul class="nav-list">
-                    <li class="nav-item">Home</li>
-                    <li class="nav-item">Room</li>
-                    <li class="nav-item">About Us</li>
-                    <li class="nav-item">Contact</li>
-                    <li class="nav-item">Login/Register</li>
+                    <li class="nav-item"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#room">Room</a></li>
+                    <li class="nav-item"><a href="#about">About Us</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                    <li class="nav-item"><a href="log_reg.php">Login/Register</a></li>
                 </ul>
             </div>       
     </nav>
     <!-- banner section -->
-     <div class="banner-container">
+     <div class="banner-container" id="home">
         <div class="banner-info">
             <h1>Great Choice Of <span class="hotel">Hotel</span></h1>
             <div class="banner-buttons">
-                <button class="banner-button">Book Now</button>
-                <button class="banner-button">Contact Us</button>
+                <button class="banner-button"><a href="log_reg.php">Book Now</a></button>
+                <button class="banner-button"><a href="#contact">Contact Us</a></button>
             </div>
         </div>
      </div>
     <!-- room section -->
-    <div>
+    <div id="room">
         <div class="room-head">
             <h1 >Luxury Rooms & Suites</h1>
         </div>
@@ -55,7 +55,7 @@ require_once '../model/room_price_query.php';
 
                             <div class="room-info">
                                 <p>$<?php echo $row['price']; ?></p>
-                                <button>Book Now</button>
+                                <button><a href="log_reg.php">Book Now</a></button>
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@ require_once '../model/room_price_query.php';
     </div>
             
     <!-- about us -->
-        <div class="about-section">
+        <div class="about-section" id="about">
             <div class="about">
                 <h1>About Us</h1>
                 <h2>
@@ -77,7 +77,7 @@ require_once '../model/room_price_query.php';
         </div>
       <!--footer  -->
       <footer>
-        <div class="footer-section">
+        <div class="footer-section" id="contact">
             <div >
                 <p>Hotel Logo</p>
                 <h3>Follow Us</h3>
