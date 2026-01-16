@@ -43,7 +43,7 @@
             <h1 >Luxury Rooms & Suites</h1>
         </div>
         
-            <div class="room-section">
+            <!-- <div class="room-section">
                 <div class="room">
                     <img class="room-image" src="./images/delux.jpg" alt="">
                     <p class="room-name">Delux</p>
@@ -76,8 +76,25 @@
                         <button>Book Now</button>
                     </div>
                 </div>
+            </div> -->
+            <div class="room-section">
+                <?php while($row = mysqli_fetch_assoc($result)) { ?>
+                    
+                    <div class="room">
+                        <img class="room-image" src="./images/<?php echo $row['room_type']; ?>.jpg" alt="">
+                        
+                        <p class="room-name"><?php echo $row['room_type']; ?></p>
+
+                        <div class="room-info">
+                            <p>$<?php echo $row['price']; ?></p>
+                            <button>Book Now</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                </div>
+
             </div>
-      </div>
     <!-- about us -->
         <div class="about-section">
             <div class="about">
