@@ -1,4 +1,5 @@
 <?php
+require_once '../model/room_price_query.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,63 +39,30 @@
         </div>
      </div>
     <!-- room section -->
-      <div>
+    <div>
         <div class="room-head">
             <h1 >Luxury Rooms & Suites</h1>
         </div>
         
-            <!-- <div class="room-section">
-                <div class="room">
-                    <img class="room-image" src="./images/delux.jpg" alt="">
-                    <p class="room-name">Delux</p>
-                    <div class="room-info">
-                        <p>$180</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-                <div class="room">
-                    <img class="room-image" src="./images/Super Delux King.jpg" alt="">
-                    <p class="room-name2">Super Delux King</p>
-                    <div class="room-info">
-                        <p>$280</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-                <div class="room">
-                    <img class="room-image" src="./images/super delux twin.jpg" alt="">
-                    <p class="room-name3">Super Delux Twin</p>
-                    <div class="room-info">
-                        <p>$250</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-                <div class="room">
-                    <img class="room-image" src="./images/JuniorSuit.jpg" alt="">
-                    <p class="room-name">Junior Suit</p>
-                    <div class="room-info">
-                        <p>$300</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-            </div> -->
-            <div class="room-section">
-                <?php while($row = mysqli_fetch_assoc($result)) { ?>
+            <!--  <div class="room-section"> -->
+                <div class="room-section">
+                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
                     
-                    <div class="room">
-                        <img class="room-image" src="./images/<?php echo $row['room_type']; ?>.jpg" alt="">
+                        <div class="room">
+                            <img class="room-image" src="./images/<?php echo $row['room_type']; ?>.jpg" alt="">
                         
-                        <p class="room-name"><?php echo $row['room_type']; ?></p>
+                            <p class="room-name"><?php echo $row['room_type']; ?></p>
 
-                        <div class="room-info">
-                            <p>$<?php echo $row['price']; ?></p>
-                            <button>Book Now</button>
+                            <div class="room-info">
+                                <p>$<?php echo $row['price']; ?></p>
+                                <button>Book Now</button>
+                            </div>
                         </div>
-                    </div>
 
-                <?php } ?>
+                    <?php } ?>
                 </div>
-
-            </div>
+    </div>
+            
     <!-- about us -->
         <div class="about-section">
             <div class="about">
