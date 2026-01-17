@@ -3,6 +3,7 @@ session_start();
 require_once '../model/roomEditQuery.php';
     if (isset($_REQUEST['edit_id'])){
         $receive_id=(int)$_REQUEST['edit_id'];
+        $_SESSION['roomId']=$receive_id;
         $result=editQuery($receive_id);
         $row=mysqli_fetch_assoc($result);
         if($row){

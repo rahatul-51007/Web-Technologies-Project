@@ -27,18 +27,8 @@ include_once '../model/employeeListQuery.php';
          <div class="dashboard">
             <div id="add-remove">
                 <div class="form-add"> 
-                    <form action="../controllers/addEmployeeController.php" id="add-option" method="post" onsubmit="return validate(this)" >
-                        <span id="success">
-                            <?php 
-                            echo isset($_SESSION['success']) ? $_SESSION['success'] : ""; 
-                            unset($_SESSION['success']);
-                            ?>
-                        </span>
-                        <span>
-                            <?php echo isset($_SESSION['invalidMsg']) ? $_SESSION['invalidMsg'] : ""; 
-                            unset($_SESSION['invalidMsg']);
-                            ?>
-                        </span>
+                    <form action="../controllers/addEmployeeController.php" id="emp-option" method="post" onsubmit="return validate(this)" >
+                        
                         <table>
                             <tr>
                                 <td>Full name</td>
@@ -80,10 +70,21 @@ include_once '../model/employeeListQuery.php';
                             </tr> -->
                         </table>
                         <input type="submit" name="add" value="Add" class="add">
-                        <input type="submit" name="update" value="Update" class="add">
+                        <input type="submit" name="update" value="Update" class="update">
                         <a href="../controllers/add_clear.php" class="clear">Clear</a>
                         
                     </form>
+                    <span id="success">
+                        <?php 
+                            echo isset($_SESSION['success']) ? $_SESSION['success'] : ""; 
+                            unset($_SESSION['success']);
+                        ?>
+                        </span>
+                        <span>
+                            <?php echo isset($_SESSION['invalidMsg']) ? $_SESSION['invalidMsg'] : ""; 
+                            unset($_SESSION['invalidMsg']);
+                            ?>
+                        </span>
                 </div>     
             </div>
             <div class="outer-wrapper">
