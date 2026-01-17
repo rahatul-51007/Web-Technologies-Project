@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: rgb(255, 253, 208);
 }
 
 .container {
@@ -56,6 +56,12 @@ body {
 }
 
 .link {
+    text-align: center;
+    margin-top: 10px;
+    color: #007BFF;
+    cursor: pointer;
+}
+.link a{
     text-align: center;
     margin-top: 10px;
     color: #007BFF;

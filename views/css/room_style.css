@@ -75,59 +75,34 @@ body{
     background-color: #ecf0f1;
 }
 
-
-.count{
-    
-    margin: 100px;
-    margin-top: 50px; 
-    display: flex; 
-    justify-content: space-around; 
-}
-
-.count-card{
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    width: 250px;
-    height: 150px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 0 ;
-}
-.count-card h1{
-    font-size: 40px;
-}
-
-.room-count{
-    margin: 100px;
-    margin-top: 50px; 
-    display: flex; 
-    justify-content: space-between;
-}
-.room-card{
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 0 ;
-}
-.room-card h1{
-    font-size: 40px;
-}
 /* room update */
 .form-room{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin: 30px;
     width: auto;
     height: 200px;
 
 }
 #room-option .save{
-    width: 100px;
-    height: 40px;
+    width: 80px;
+    height: 30px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background-color: red;
+    text-decoration: none;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+#room-option .clear{
+    width: 80px;
+    height: 30px;
+    padding: 6px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    text-decoration: none;
     background-color: red;
     color: aliceblue;
     border: none;
@@ -139,7 +114,7 @@ body{
 
 }
 #room-option input{
-    width: 190px;
+    width: 300px;
     height: 30px;
 
 }
@@ -148,33 +123,6 @@ body{
 }
 
 /* add-remove */
-.form-add{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin: 60px; */
-    padding: 60px;
-    width: auto;
-    height: 200px;
-
-}
-#add-option .add{
-    width: 100px;
-    height: 40px;
-    background-color: red;
-    color: aliceblue;
-    border: none;
-}
-
-
-#add-option input{
-    width: 190px;
-    height: 30px;
-
-}
-#add-option td{
-    padding-bottom: 15px;
-}
 
 .outer-wrapper{
     display: flex;
@@ -215,7 +163,7 @@ tbody td {
     overflow-y: auto;
     /* table-layout: fixed; */
     width: 100%; 
-    max-height: 250px;
+    max-height: 280px;
     border-spacing: 0px;
     margin: 0px;
     font-size: 16px;
@@ -245,62 +193,6 @@ tbody td {
     padding: 12px 15px;
     border-bottom: 1px solid #dddddd;
 }
-
-
-
-/* employee */
-.emptable{
-    border-collapse: separate;
-    display: block;
-    overflow-y: auto;
-    /* table-layout: fixed; */
-    width: 100%; 
-    max-height: 250px;
-    border-spacing: 0px;
-    margin: 0px;
-    font-size: 16px;
-    background-color: #fff;
-    border: 1px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-.emptable th,
-.emptable td {
-    width: 10%;                   
-    padding: 12px 15px;
-    /* box-sizing: border-box;       
-    overflow: hidden;             
-    text-overflow: ellipsis;      
-    white-space: nowrap;          */
-}
-thead th{
-    background-color: #2c3e50; 
-    color: #ffffff;
-    text-align: left;
-    position: sticky;
-    top: 0px;
-}
-tbody td {
-    padding: 12px 15px;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    text-align: left;
-      
-}
-
-.emptable tbody tr:nth-child(even) {
-    background-color: #f2f2f2; 
-}
-.emptable tbody tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-.emptable tbody td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #dddddd;
-}
-
-/* delete and update button */
 .btn{
     display: inline-block;
     padding: 8px 16px;
@@ -318,37 +210,4 @@ tbody td {
 }
 .btn-update {
     background-color: blue;
-}
-.btn-delete {
-    background-color: red;
-}
-
-/* staff */
-/* search */
-.search-container{
-    margin: 30px;
-    width: auto;
-    height: 200px;
-}
-#search-by-room-name input{
-    width: 600px;
-    height: 30px;
-    margin-bottom: 20px;
-}
-#search-by-room-name .search-rname{
-    width: 100px;
-    height: 30px;
-    background-color: red;
-    color: aliceblue;
-    border: none;
-}
-#search-by-date td{
-    padding-bottom: 15px;
-}
-#search-by-date .search-date{
-    width: 100px;
-    height: 25px;
-    background-color: red;
-    color: aliceblue;
-    border: none;
 }
