@@ -9,7 +9,7 @@ include_once '../model/employeeListQuery.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="./css/admin_style.css">
+    <link rel="stylesheet" href="./css/employee_add_style.css">
 </head>
 <body>  
     <div class="nav-dashboard">
@@ -55,7 +55,7 @@ include_once '../model/employeeListQuery.php';
                                 </span>
                                 <span>
                                     <?php echo isset($_SESSION['invalidUnameMsg']) ? $_SESSION['invalidUnameMsg'] : ""; ?>
-                                </span><td>                          
+                                </span></td>                          
                             </tr>
                             <tr>
                                 <td>Email</td>
@@ -81,6 +81,7 @@ include_once '../model/employeeListQuery.php';
                         </table>
                         <input type="submit" name="add" value="Add" class="add">
                         <input type="submit" name="update" value="Update" class="add">
+                        <a href="../controllers/add_clear.php" class="clear">Clear</a>
                         
                     </form>
                 </div>     

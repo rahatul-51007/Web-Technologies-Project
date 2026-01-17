@@ -47,7 +47,7 @@ session_start();
 
             <button type="submit">Register</button>
 
-            <a class="link" href="../controllers/login_session.php"> Already have an account?</a>
+            <p class="link"><a  href="../controllers/login_session.php"> Already have an account?</a></p>
         </form>
      </div>
     

@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 /* nav bar style */
 .nav-bar{    
     height: 60px;
@@ -16,6 +19,17 @@ body {
 }
 .nav-list{
     display:flex;
+}
+.nav-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-list a:hover{
+    
+    background-color: rgba(48, 40, 40, 0.6);
+    padding: 5px 10px;
+    color: white;
 }
 .nav-item{  
     list-style: none;
@@ -53,6 +67,10 @@ body {
     justify-content: center;
     /* align-items: center; */
 }
+.banner-button a{
+    text-decoration: none;
+    color: aliceblue;
+}
 .banner-button{
     padding: 10px 20px;
     background-color: red;
@@ -78,6 +96,7 @@ body {
     display: flex;  
     gap: 20px;
 }
+
 .room{
     background-color: rgb(255, 253, 208);
     width: 250px;
@@ -86,11 +105,17 @@ body {
     position: relative;
     box-shadow: 0 0 5px 0 ;
 }
+
+.room-section a{
+    text-decoration: none;
+    color: black;
+}
 .room button:hover{
     background-color: red;
-    color: white;
     border: none;
 }
+
+
 .room-image{
     width: 230px;
     height: 210px;
@@ -101,7 +126,7 @@ body {
 
 
 .room-name{
-    width: 100px;
+    min-width: 150px;
     height: 20px;
     position: absolute;
     background-color: red;
@@ -112,30 +137,7 @@ body {
     text-align: center;
 
 }
-.room-name2{
-    width: 130px;
-    height: 20px;
-    position: absolute;
-    background-color: red;
-    color: white;
-    right: 10px;
-    top: 185px;
-    padding: 5px;
-    text-align: center;
 
-}
-.room-name3{
-    width: 130px;
-    height: 20px;
-    position: absolute;
-    background-color: red;
-    color: white;
-    right: 10px;
-    top: 185px;
-    padding: 5px;
-    text-align: center;
-
-}
 .room-info{
     display: flex;
     justify-content: space-between;
