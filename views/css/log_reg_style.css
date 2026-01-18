@@ -11,6 +11,24 @@ body {
     align-items: center;
     background-color: rgb(255, 253, 208);
 }
+#home{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    display: flex;                
+    justify-content: center;      
+    align-items: center;          
+    border: none;
+    text-align: center;           
+    text-decoration: none;
+    font-weight: bold;           
+    cursor: pointer;
+
+}
 
 .container {
     width: 350px;

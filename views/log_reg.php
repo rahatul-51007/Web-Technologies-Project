@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="./css/log_reg_style.css">
 </head>
 <body>
-
+<a href="./front.php" id="home">Home</a>
 <div class="container">
 
     <!-- Login Form -->
