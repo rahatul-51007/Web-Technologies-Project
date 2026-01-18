@@ -27,8 +27,8 @@ include_once '../model/summaryQuery.php';
          <div class="dashboard">
             <div id="summary">
                 <div class="search-container">
-                    <form action="" id="search-by-room-name" method="POST">
-                        <input type="text" class="search" placeholder="Enter room name" name="room_name" value="<?php echo isset($_SESSION['search_room_name']) ? $_SESSION['search_room_name'] : ""; ?>">
+                    <form action="" id="search-by-room-name" method="POST" onclick="getData();return false;">
+                        <input type="text" class="search" placeholder="Enter room name" name="room_name" id="room_name" value="">
                         <input type="submit" class="search-rname" name="search_room" value="Search" >
                     </form>
                 </div>
@@ -45,7 +45,7 @@ include_once '../model/summaryQuery.php';
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="i1">
                                 <?php
 
                                 if(isset($_POST['search_room'])){
@@ -82,5 +82,6 @@ include_once '../model/summaryQuery.php';
          </div>
     </div>
     <script src="./js/script_admin.js"></script>
+    <script src="./js/search.js"></script>
 </body>
 </html>
