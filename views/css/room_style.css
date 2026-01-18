@@ -166,7 +166,7 @@ tbody td {
     width: 100%; 
     max-height: 280px;
     border-spacing: 0px;
-    margin: 0px;
+    margin-top: 50px;
     font-size: 16px;
     background-color: #fff;
     border: 1px solid black;
