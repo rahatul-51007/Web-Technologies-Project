@@ -5,6 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 require_once '../model/customerBookingCancelQuery.php';
 
+// Check if user is logged in
 if(isset($_POST['cancel_id'])){
     $bookingId = (int)$_POST['cancel_id'];
     $result = cancelBooking($bookingId);
