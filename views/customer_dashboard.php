@@ -45,7 +45,7 @@ include_once '../controllers/pageSecurity.php';
                     <div class="count-section">
                         <?php
                         require_once '../model/customerBookingListQuery.php';
-                        $userId = $_SESSION['user_id'];
+                        $userId = $_SESSION['id'];
                         
                         // Count total bookings
                         $allBookings = getBookingsByUserId($userId);
