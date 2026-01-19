@@ -17,7 +17,7 @@
             return "errEmail";
         }
 
-        $insertQuery="INSERT INTO user (name,role,uname,email,pwd) VALUES ('{$user['name']}','user','{$user['uname']}','{$user['email']}','{$user['pwd']}')";
+        $insertQuery="INSERT INTO user (name,role,uname,email,pwd) VALUES ('{$user['name']}','employee','{$user['uname']}','{$user['email']}','{$user['pwd']}')";
         $result=mysqli_query($conn,$insertQuery);
         if($result){
             return true;

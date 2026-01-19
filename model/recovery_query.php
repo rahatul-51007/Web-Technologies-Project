@@ -1,12 +1,12 @@
 <?php
     require_once '../model/connection.php';
 
-    function loginUser($user){
+    function recovery($user){
         $conn=dbConnection();
-        $query="SELECT * FROM user WHERE uname='{$user['uname']}' AND pwd='{$user['pwd']}'";
+        $query="SELECT * FROM user WHERE email='{$user['email']}'";
         $result=mysqli_query($conn,$query);
         $count=mysqli_num_rows($result);
-        if($count>1 || $count==0 ){
+        if($count==0){
             return false;
         }
         else{
