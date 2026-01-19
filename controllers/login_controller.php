@@ -50,7 +50,7 @@ function loginController($user)
         } elseif ($status['role'] === 'employee') {
             header("Location: ../views/employee_dashboard.php");
         } elseif ($status['role'] === 'user') {
-            header("Location: ../views/user_dashboard.php");
+            header("Location: ../views/customer_dashboard.php");
         }
     } else {
         $_SESSION['invalidErrMsg'] = "Invalid user name or password ";
