@@ -5,7 +5,7 @@ function addBooking($roomType, $checkInDate, $checkOutDate, $guest){
     $conn = dbConnection();
     
     // Get user_id from session (session already started in controller)
-    $userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+    $userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
     
     // Check if room is available
     $checkRoomSql = "SELECT count FROM room WHERE room_type = '$roomType'";

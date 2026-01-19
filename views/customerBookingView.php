@@ -60,7 +60,7 @@ include_once '../controllers/customerBookingController.php';
                             <tbody>
                                 <?php
                                 require_once '../model/customerBookingListQuery.php';
-                                $userId = $_SESSION['user_id'];
+                                $userId = $_SESSION['id'];
                                 $pendingBookings = getBookingsByStatus($userId, 'pending');
                                 
                                 if($pendingBookings && mysqli_num_rows($pendingBookings) > 0){

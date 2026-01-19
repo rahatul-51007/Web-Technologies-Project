@@ -5,12 +5,12 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 require_once '../model/customerBookingListQuery.php';
 
-if(!isset($_SESSION['user_id'])){
+if(!isset($_SESSION['id'])){
     header("Location: ../views/log_reg.php");
     exit();
 }
 
-$userId = $_SESSION['user_id'];
+$userId = $_SESSION['id'];
 $bookings = getBookingsByUserId($userId);
 
 // Return as JSON for AJAX requests
