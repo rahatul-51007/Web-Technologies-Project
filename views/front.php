@@ -16,7 +16,7 @@ require_once '../model/room_price_query.php';
     <nav class="nav-bar">
             <div >
                 <!-- <img class="nav-bar-logo" src="./images/hotel-logo.jpg" alt=""> -->
-                <h4>Hotel Logo</h4>
+                <h4><Strong>Hotel.</Strong></h4>
             </div>
             <div>
                 <ul class="nav-list">
